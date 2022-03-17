@@ -4,6 +4,11 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'Yggdroot/LeaderF'
+Plug 'SpaceVim/SpaceVim'
 call plug#end()
 
 colorscheme gruvbox
@@ -20,10 +25,18 @@ let g:airline_theme='base16_twilight'
 " nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" Key Lider
+"let mapleader = ","
+
+
+"nnoremap <silent> <space>f :Rg<CR>
+
+" Atalho para procurar arquivos globalmente
+nnoremap <silent> <C-p> :Files<CR>
+
+
 " ativar sintaxe colorida
-
-
-
 syntax on
 
 " ativar indentação automática
